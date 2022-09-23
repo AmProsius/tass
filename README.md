@@ -2,6 +2,14 @@
 
 _TASS_ is short for an application that consists of Symfony + Stimulus + Tailwind CSS + Alpine.js. 
 
+## Preliminary Considerations
+
+This repository contains opinionated plugins. The following plugins are opt-out:
+```sh
+yarn remove @tailwindcss/forms
+yarn remove @tailwindcss/typography
+```
+
 ### Build
 
 1. Install dependencies
