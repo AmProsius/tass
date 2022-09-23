@@ -1,6 +1,6 @@
 import "./styles/app.css";
 
-import "./bootstrap";
+//import "./bootstrap";
 import Alpine from "alpinejs";
 import collapse from "@alpinejs/collapse";
 
