@@ -18,23 +18,28 @@ On the other hand, these packs are opt-in:
 composer require symfony/apache-pack
 ```
 
-Also Stimulus is opt-in. If you need Stimulus in your app, follow these steps:
+Also Stimulus is opt-in. If you need Stimulus in your app, uncomment these references:
 
-1. Uncomment reference from `./assets/app.js`:
+```diff
+--- a/assets/app.js
++++ b/assets/app.js
+@@ -1,3 +1,3 @@
 
-   ```diff
-   import "./styles/app.css";
+import "./styles/app.css";
 
-   - //import "./bootstrap";
-   + import "./bootstrap";
-   ```
+-//import "./bootstrap";
++import "./bootstrap";
+```
 
-2. Uncomment references from `./webpack.config.js`:
-   ```diff
-     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
-     - //.enableStimulusBridge("./assets/controllers.json")
-     + .enableStimulusBridge("./assets/controllers.json")
-   ```
+```diff
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -25,2 +25,2 @@
+
+  // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+-  //.enableStimulusBridge("./assets/controllers.json")
++  .enableStimulusBridge("./assets/controllers.json")
+```
 
 ### Build
 
