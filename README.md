@@ -46,6 +46,7 @@ import "./styles/app.css";
 1. Install dependencies
    ```sh
    composer install
+   composer install --working-dir=tools/php-cs-fixer
    yarn install
    yarn dev
    ```
@@ -81,11 +82,14 @@ import "./styles/app.css";
 
 #### Pre-Commit
 
-Smoke test your URLs with
-
-```sh
-php bin/phpunit
-```
+- Smoke test your URLs
+  ```sh
+  php bin/phpunit
+  ```
+- Format your PHP files
+  ```sh
+  tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php
+  ```
 
 ### Terminate
 
