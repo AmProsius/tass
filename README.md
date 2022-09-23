@@ -79,6 +79,14 @@ import "./styles/app.css";
    symfony open:local
    ```
 
+#### Pre-Commit
+
+Smoke test your URLs with
+
+```sh
+php bin/phpunit
+```
+
 ### Terminate
 
 1. Stop local web server
