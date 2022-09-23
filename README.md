@@ -11,6 +11,11 @@ yarn remove @tailwindcss/typography
 yarn remove @alpinejs/collapse
 ```
 
+On the other hand, these packs are opt-in:
+```sh
+composer require symfony/apache-pack
+```
+
 ### Build
 
 1. Install dependencies
