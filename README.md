@@ -1,10 +1,11 @@
 # TASS Boilerplate
 
-_TASS_ is short for an application that consists of Symfony + Stimulus + Tailwind CSS + Alpine.js. 
+_TASS_ is short for an application that consists of Symfony + Stimulus + Tailwind CSS + Alpine.js.
 
 ## Preliminary Considerations
 
 This repository contains opinionated plugins. The following plugins are opt-out:
+
 ```sh
 yarn remove @tailwindcss/forms
 yarn remove @tailwindcss/typography
@@ -12,6 +13,7 @@ yarn remove @alpinejs/collapse
 ```
 
 On the other hand, these packs are opt-in:
+
 ```sh
 composer require symfony/apache-pack
 ```
@@ -31,6 +33,7 @@ composer require symfony/apache-pack
    ```
 
 ### Develop
+
 1. Start Webpack Encore file watcher
    ```sh
    yarn watch
