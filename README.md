@@ -26,7 +26,15 @@ composer require symfony/apache-pack
    yarn install
    yarn dev
    ```
-2. Start local web server
+2. Start database
+   ```sh
+   docker-compose up -d database
+   ```
+3. Populate database
+   ```sh
+   symfony console doctrine:migrations:migrate
+   ```
+4. Start local web server
    ```sh
    symfony server:start -d
    symfony open:local
@@ -38,7 +46,11 @@ composer require symfony/apache-pack
    ```sh
    yarn watch
    ```
-2. Start local web server
+2. Start database
+   ```sh
+   docker-compose up -d database
+   ```
+3. Start local web server
    ```sh
    symfony server:start -d
    symfony open:local
@@ -50,4 +62,12 @@ composer require symfony/apache-pack
    ```sh
    symfony server:stop
    ```
-2. Stop Webpack Encore file watcher
+2. Stop database
+   ```sh
+   docker-compose stop
+   ```
+3. Destroy database _(optional)_
+   ```sh
+   docker-compose down
+   ```
+4. Stop Webpack Encore file watcher
