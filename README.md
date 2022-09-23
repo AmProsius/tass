@@ -8,6 +8,7 @@ This repository contains opinionated plugins. The following plugins are opt-out:
 ```sh
 yarn remove @tailwindcss/forms
 yarn remove @tailwindcss/typography
+yarn remove @alpinejs/collapse
 ```
 
 ### Build
