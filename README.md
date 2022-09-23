@@ -57,6 +57,7 @@ import "./styles/app.css";
 3. Populate database
    ```sh
    symfony console doctrine:migrations:migrate
+   symfony console doctrine:fixtures:load --purge-with-truncate
    ```
 4. Start local web server
    ```sh
