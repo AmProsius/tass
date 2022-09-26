@@ -1,0 +1,49 @@
+{% set alert_variant = {
+    'info': {
+        'bg_color': 'bg-blue-50',
+        'icon_name': 'information-circle',
+        'icon_color': 'text-blue-400',
+        'text_color': 'text-blue-700',
+    },
+    'success': {
+        'bg_color': 'bg-green-50',
+        'icon_name': 'check-circle',
+        'icon_color': 'text-green-400',
+        'title_color': 'text-green-800',
+        'text_color': 'text-green-700',
+    },
+    'warning': {
+        'bg_color': 'bg-yellow-50',
+        'icon_name': 'exclamation-triangle',
+        'icon_color': 'text-yellow-400',
+        'title_color': 'text-yellow-800',
+        'text_color': 'text-yellow-700',
+    },
+    'danger': {
+        'bg_color': 'bg-red-50',
+        'icon_name': 'x-circle',
+        'icon_color': 'text-red-400',
+        'title_color': 'text-red-800',
+        'text_color': 'text-red-700',
+    },
+}[variant] %}
+<div class="rounded-md {{ alert_variant.bg_color }} p-4">
+    <div class="flex">
+        <div class="shrink-0">
+            {{ component('icon_mini', {
+                name: alert_variant.icon_name,
+                class: alert_variant.icon_color,
+            }) }}
+        </div>
+        <div class="ml-3">
+            {% if title is not empty %}
+                <h3 class="text-sm font-medium {{ alert_variant.title_color }}">
+                    {{ title|raw }}
+                </h3>
+            {% endif %}
+            <p class="{{ title is not empty ? 'mt-2 ' }}text-sm {{ alert_variant.text_color }}">
+                {{ text|raw }}
+            </p>
+        </div>
+    </div>
+</div>
